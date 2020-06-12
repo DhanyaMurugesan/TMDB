@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="7d61f0a6-0919-4e10-a91b-bfb5fbe6967d" activeEnvironment="Default" name="REST Project 1" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="Verify GET Request"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value="E:\Reports"/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="3b4f1f62-2457-4705-b70c-957a136038b2" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://api.themoviedb.org" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://api.themoviedb.org</con:endpoint></con:endpoints><con:resource name="List" path="4/list/4" id="709a1abb-d86a-4ed6-b73e-912627bacde3"><con:settings/><con:parameters><con:parameter><con:name>api_key</con:name><con:style>QUERY</con:style></con:parameter><con:parameter><con:name>place</con:name><con:style>QUERY</con:style></con:parameter><con:parameter><con:name>page</con:name><con:style>QUERY</con:style></con:parameter></con:parameters><con:method name="List 1" id="bb0f19ce-3ec9-4c4f-941c-d40d05638d38" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html;charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=utf-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=utf-8</con:mediaType><con:status>500 404</con:status><con:params/><con:element xmlns:ns="https://api.themoviedb.org/4/list/2">ns:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:ns="https://api.themoviedb.org/4/list/4">ns:Fault</con:element></con:representation><con:request name="Request 1" id="a702c67a-bea0-4255-802e-078c2f4f35a8" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting></con:settings><con:endpoint/><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="api_key" value="${#Project#api_key}"/>
+  <con:entry key="page" value="1"/>
+</con:parameters><con:parameterOrder><con:entry>api_key</con:entry><con:entry>page</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="0" path="/4/list/0" id="ad65c5bc-0f40-44c8-90ab-a4ddde567033"><con:settings/><con:parameters><con:parameter><con:name>api_key</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>page</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="22b81674-df55-4e4e-a48c-fe15bb376ed4" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=utf-8</con:mediaType><con:status>422</con:status><con:params/><con:element xmlns:ns="https://api.themoviedb.org/4/list/0">ns:Fault</con:element></con:representation><con:request name="Request 1" id="bddd5c0a-be13-42d9-a3be-2d51f5cd7760" mediaType="application/json"><con:settings/><con:endpoint>https://api.themoviedb.org</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="api_key" value="${#Project#api_key}"/>
+  <con:entry key="page" value="1"/>
+</con:parameters><con:parameterOrder><con:entry>api_key</con:entry><con:entry>page</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="de7773ee-b0cc-4122-82d5-7e55b4ecac34" name="Verify GET Request"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="8dba7cba-1092-4b42-b03e-95616b702944" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Successfully getting details of list" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="fc20390e-8b7d-4c72-a4cd-398c1ab2b308"><con:settings/><con:config service="https://api.themoviedb.org" resourcePath="/4/list/4" methodName="List 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="a702c67a-bea0-4255-802e-078c2f4f35a8" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting></con:settings><con:endpoint>https://api.themoviedb.org/</con:endpoint><con:request/><con:originalUri>https://api.themoviedb.org/4/list/4</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="api_key" value="${#Project#api_key}"/>
+  <con:entry key="page" value="1"/>
+</con:parameters><con:parameterOrder><con:entry>api_key</con:entry><con:entry>page</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>res</con:name><con:value>/4/list/4</con:value></con:property><con:property><con:name>page</con:name><con:value/></con:property></con:properties></con:testCase><con:testCase id="3b5ddb94-ec80-4e87-b21a-240159fffd05" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Getting error due to invalid list id" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="3ac4648f-78d0-48c0-9ace-cb9b1de505e7"><con:settings/><con:config service="https://api.themoviedb.org" resourcePath="/4/list/0" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="bddd5c0a-be13-42d9-a3be-2d51f5cd7760" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://api.themoviedb.org/</con:endpoint><con:request/><con:originalUri>https://api.themoviedb.org/4/list/0</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="api_key" value="${#Project#api_key}"/>
+  <con:entry key="page" value="1"/>
+</con:parameters><con:parameterOrder><con:entry>api_key</con:entry><con:entry>page</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="86edb9ac-54e5-457f-996b-3dcb14a3cf3b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Response should contain name field" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="86761b00-19db-425e-9bcb-3cfc066cf222"><con:settings/><con:config service="https://api.themoviedb.org" resourcePath="/4/list/4" methodName="List 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="a702c67a-bea0-4255-802e-078c2f4f35a8" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting></con:settings><con:endpoint>https://api.themoviedb.org/</con:endpoint><con:request/><con:originalUri>https://api.themoviedb.org/4/list/4</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="api_key" value="${#Project#api_key}"/>
+  <con:entry key="page" value="1"/>
+</con:parameters><con:parameterOrder><con:entry>api_key</con:entry><con:entry>page</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="bc1d1983-f674-4a52-ab91-2d95723e56e0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Script" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="83cbc53f-891e-4aa4-a26e-1de00c81dc46"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+
+def endpoint=testRunner.testCase.testSuite.project.getPropertyValue("endpoint")
+def testsp=testRunner.testCase.testSuite.getTestCaseByName("Successfully getting details of list").getTestStepByName("REST Request")
+testsp.setPropertyValue("Endpoint", endpoint)
+testsp.run(testRunner, context)
+def header=testsp.testRequest.response.responseHeaders
+def status= header["#status#"]
+def res=testsp.getPropertyValue("Response")
+def jsondata=new JsonSlurper().parseText(res)
+assert status.contains("HTTP/1.1 200 OK") 
+
+
+
+def testsp1=testRunner.testCase.testSuite.getTestCaseByName("Getting error due to invalid list id").getTestStepByName("REST Request")
+testsp1.setPropertyValue("Endpoint", endpoint)
+testsp1.run(testRunner, context)
+def header1=testsp1.testRequest.response.responseHeaders
+def status1= header1["#status#"]
+def res1=testsp1.getPropertyValue("Response")
+def jsondata1=new JsonSlurper().parseText(res1)
+assert status1.contains("HTTP/1.1 422 Unknown")
+assert jsondata1.errors != null
+
+
+
+def testsp3=testRunner.testCase.testSuite.getTestCaseByName("Response should contain name field").getTestStepByName("REST Request")
+testsp3.setPropertyValue("Endpoint", endpoint)
+testsp3.run(testRunner, context)
+def header3=testsp3.testRequest.response.responseHeaders
+def status3= header3["#status#"]
+def res3=testsp3.getPropertyValue("Response")
+def jsondata3=new JsonSlurper().parseText(res3) 
+assert jsondata.name != null</script></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>resource</con:name><con:value>/4/list/</con:value></con:property><con:property><con:name>page</con:name><con:value>1</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>api_key</con:name><con:value>d1cdbce35c4304e0e2130cb18b916386</con:value></con:property><con:property><con:name>endpoint</con:name><con:value>https://api.themoviedb.org/</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
